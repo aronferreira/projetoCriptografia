@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./script.js"></script>
+</head>
+<body>
+    <img src="./tenor.gif" alt="logoAlura" id="logo">
+    <main>
+        <div id="inputDiv">
+            <!-- <input type="text" name="textoCriptografar" id="inputTexto" placeholder="Digite seu texto."></input> -->
+            <textarea name="textoCriptografar" id="inputTexto" placeholder="Digite seu texto."></textarea>
+            <div class="botoesDiv">
+                <button onclick="pegarTexto('Criptografar')" class="botoes">Criptografar</button>
+                <button onclick="pegarTexto('Descriptografar')" class="botoes">Descriptografar</button>
+            </div>
+        </div>
+        <div id="container">
+            <div id="exotico" class="teste">
+                <img src="./images/imagem1.svg" class="imagem" alt="">
+                <h1>Nenhuma mensagem encontrada</h1>
+                <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
+            </div>
+        </div>
+    </main>
+    <!--<div id="botoesDiv">
+        <button class="botoes">Criptografar</button>
+        <button class="botoes">Descriptografar</button>
+    </div>
+-->
+</body>
+</html>
