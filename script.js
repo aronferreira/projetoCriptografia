@@ -16,20 +16,29 @@ function pegarTexto(tipoEnvio) {
 }
 
 function exibirTexto(convertido) {
-    let teste = document.getElementById('exotico');
-    teste.innerHTML = '<p id="textoCriptografado"></p><button id="copiarTexto" class="botoes" onClick="(copy())">Copiar</button>';
-    teste.style.justifyContent = 'space-between';
-    teste.style.overflowWrap = 'break-word';
-    teste.style.overflow = 'auto';
-    let doideira = document.getElementById("copiarTexto");
-    doideira.style.margin = '20px 0px';
-    let exibidor = document.getElementById("textoCriptografado");
+    let containerMensagem = document.getElementById('containerMensagem');
+    containerMensagem.innerHTML = '<p id="textoResultado"></p><button id="copiarTexto" class="botoes" onClick="(copy())">Copiar</button>';
+    containerMensagem.style.justifyContent = 'space-between';
+    containerMensagem.style.overflowWrap = 'break-word';
+    containerMensagem.style.overflow = 'auto';
+    let botaoCopiar = document.getElementById("copiarTexto");
+    botaoCopiar.style.margin = '20px 0px';
+    let exibidor = document.getElementById("textoResultado");
     exibidor.textContent = convertido;
     exibidor.style.fontSize = '20px';
     exibidor.style.color = '#495057';
 }
 
 function descriptografar(textoEnviado) {
+    for (let i = 0; i < textoEnviado.length; i++) {
+        if (textoEnviado[i] == 'a' && textoEnviado[i + 1] == 'i') {
+            textoEnviado = textoEnviado.slice(0, i + 1) + textoEnviado.slice(i + 2);
+        }
+    }
+    textoEnviado = textoEnviado.replaceAll('nter', '');
+    textoEnviado = textoEnviado.replaceAll('mes', '');
+    textoEnviado = textoEnviado.replaceAll('ber', '');
+    textoEnviado = textoEnviado.replaceAll('fat', '');
     exibirTexto(textoEnviado);
 }
 
@@ -61,5 +70,5 @@ function converterTexto(textoPadrao) {
 }
 
 function copy() {
-    navigator.clipboard.writeText(textoCriptografado);
+    navigator.clipboard.writeText(document.getElementById('textoResultado').innerHTML);
   };
