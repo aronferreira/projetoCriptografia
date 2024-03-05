@@ -13,12 +13,16 @@
         <div id="inputDiv">
             <!-- <input type="text" name="textoCriptografar" id="inputTexto" placeholder="Digite seu texto."></input> -->
             <textarea name="textoCriptografar" id="inputTexto" placeholder="Digite seu texto."></textarea>
+            <div id="aviso">
+                <img id="avisoImagem" src="./images/aviso.png" alt="">
+                <p id="avisoTexto">Apenas letras minúsculas e sem acento.</p>
+            </div>
             <div class="botoesDiv">
                 <button onclick="pegarTexto('Criptografar')" class="botoes">Criptografar</button>
                 <button onclick="pegarTexto('Descriptografar')" class="botoes">Descriptografar</button>
             </div>
         </div>
-        <div id="container">
+        <div id="container" class="containerClass">
             <div id="containerMensagem" class="containerMensagem">
                 <img src="./images/imagem1.svg" class="imagem" alt="">
                 <h1>Nenhuma mensagem encontrada</h1>

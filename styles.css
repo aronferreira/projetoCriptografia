@@ -12,6 +12,22 @@ body {
     height: 100%;
 }
 
+#aviso {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#avisoImagem {
+    width: 16px;
+    height: 16px;
+}
+
+#avisoTexto {
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+}
+
 #inputTexto {
     width: 100%;
     height: 80%;
@@ -30,7 +46,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     width: 680px;
-    height: 600px;
+    height: 615px;
     left: 15%;
 }
 
@@ -56,7 +72,6 @@ textarea::placeholder {
     font-size: 16px;
     color: white;
     padding: 10px 10px;
-    font-size: 16px;
     border-radius: 24px;
     cursor: pointer;
     align-self: center;
@@ -67,7 +82,7 @@ textarea::placeholder {
     justify-content: space-between;
 }
 
-#container {
+.containerClass {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -111,4 +126,200 @@ textarea::placeholder {
     padding: 0 20px;
 }
 
+@media (max-width: 2200px) and (min-width: 1500px) {
+    #inputDiv {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 680px;
+        height: 918px;
+        left: 15%;
+    }
+    
+    textarea {
+        font-size: 32px;
+    }
+
+    .containerMensagem {
+        height: 90%;
+    }
+}
+
+@media (max-width: 1280px) and (min-width: 1025px) {
+    .containerClass {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: absolute;
+        top: 0px;
+        right: 5%;
+        height: 100%;
+    }
+    
+    .containerMensagem {
+        background-color: #FFFFFF;
+        box-shadow: 0 25px 40px -40px rgb(99, 99, 99);
+        height: 90%;
+        width: 350px;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        border-radius: 32px;
+    }
+
+    #inputDiv {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 450px;
+        height: 590px;
+        left: 15%;
+    }
+    
+    textarea {
+        border: none;
+        font-family: "Inter", sans-serif;
+        font-size: 30px;
+        color: #0A3871;
+        background-color: none;
+        background-color: #E9ECF8;
+    }
+
+    .botoes {
+        width: 200px;
+        height: 70px;
+        font-size: 16px;
+        padding: 10px 10px;
+        font-size: 16px;
+        border-radius: 24px;
+    }
+    
+    .botoesDiv {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 1024px) and (min-width: 700px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    #inputDiv {
+        width: 680px;
+        height: 400px;
+        left: 0%;
+        margin: auto;
+    }
+
+    textarea {
+        font-size: 25px;
+    }
+
+    .containerClass {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        margin: auto;
+        margin-bottom: 15px;
+        top: 0px;
+        right: 0%;
+        height: 800px;
+    }
+
+    .containerMensagem {
+        background-color: #FFFFFF;
+        box-shadow: 0 25px 40px -40px rgb(99, 99, 99);
+        height: 100%;
+        width: 650px;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        border-radius: 32px;
+    }
+
+    #textoResultado {
+        font-size: 50px;
+    }
+
+    .botoes {
+        width: 328px;
+        height: 67px;
+        font-size: 16px;
+    }
+
+}
+
+@media (max-width: 600px) and (min-width: 360px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    #logo {
+        position: relative;
+        margin: 10px;
+        left: -40px;
+    }
+
+    #inputDiv {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 345px;
+        height: 500px;
+        margin: auto;
+        left: 0%;
+    }
+    
+    textarea {
+        border: none;
+        font-family: "Inter", sans-serif;
+        font-size: 30px;
+        color: #0A3871;
+        background-color: none;
+        background-color: #E9ECF8;
+    }
+
+    .containerClass {
+        position: relative;
+        margin: auto;
+        top: 0px;
+        right: 0%;
+        height: 520px;
+    }
+
+    .containerMensagem {
+        height: 90%;
+        width: 345px;
+    }
+
+    .botoes {
+        width: 345px;
+        height: 70px;
+        font-size: 16px;
+        padding: 10px 10px;
+        font-size: 16px;
+        border-radius: 24px;
+    }
+    
+    .botoesDiv {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #copiarTexto {
+        width: 250px;
+    }
+}
 
